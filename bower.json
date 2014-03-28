@@ -1,0 +1,28 @@
+{
+  "name": "ribbon",
+  "version": "0.0.0",
+  "authors": [
+    "Tony Gaskell <thgaskell@gmail.com>"
+  ],
+  "description": "Practice website",
+  "keywords": [
+    "two-column",
+    "dark-on-light",
+    "dark-grey",
+    "green",
+    "light-grey"
+  ],
+  "license": "free",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "modernizr": "~2.7.2"
+  }
+}

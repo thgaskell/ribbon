@@ -1,0 +1,131 @@
+@import "elements";
+
+@import "variables";
+@import "colors";
+@import "mixins";
+
+@import "header";
+
+body {
+    font-family: 'Helvetica';
+    background-color: @lightGrey;
+    background: url('../images/bg_3.png');
+}
+
+#logo {
+    z-index: 10;
+    right: 300px;
+    top: -90px;
+}
+
+#logo, #ribbon {
+    position: absolute;
+}
+
+#banner {
+    position: relative;
+    z-index: 5;
+    right: 50px;
+}
+
+.container {
+    width: @pageWidth;
+}
+
+.jumbotron {
+    position: relative;
+    padding: 0;
+    background: url('../images/bg_2.png');
+}
+
+#ribbon {
+    background-color: lighten(desaturate(@green, 50%), 20%);
+    background: url('../images/bg_r.png');
+    color: darken(desaturate(@green, 30%), 10%);
+    text-shadow: 0px 1px 1px rgba(255,255,255, .6);
+    @height: 56px;
+    width: @pageWidth;
+    bottom: 2em;
+    height: @height;
+    line-height: @height;
+    padding: 0 1em;
+    @width: 58px;
+    &:before, &:after {
+        content: "";
+        .size(@width, 72px);
+        position: absolute;
+    }
+    &:before {
+        background: url('../images/ribbon-left.png');
+        left: -@width;
+    }
+    &:after {
+        background: url('../images/ribbon-right.png');
+        right: -@width;
+    }
+    a {
+        @bgColor: lighten(desaturate(@green, 50%), 23%);
+        @borderColor: desaturate(@green, 50%);
+        .button-variant(darken(@green, 25%), @bgColor, @borderColor);
+        font-size: smaller;
+        font-weight: bold;
+        padding: .65em 2em;
+        box-shadow: 0 1px 0 0 @borderColor, 0 0 0 3px lighten(desaturate(@borderColor, 5%), 10%), 0 1px 0 0 lighten(@bgColor, 10%) inset;
+        position: absolute;
+        right: 1em;
+        top: @height/2-17px;
+    }
+    z-index: 5;
+}
+
+.featured {
+    article div {
+        background-color: @white;
+        background-image: url('../images/h_line.png'), url('../images/v_line.png');
+        background-repeat: repeat, repeat-y;
+        padding: 2.3em 1em 0 2em;
+        min-height: 315px;
+        border: 1px solid lighten(@darkGrey, 60%);
+        .box-shadow(0px 8px 5px -5px lighten(@darkGrey, 60%));
+        font-size: 12px;
+        line-height: 1.9em;
+        p {
+            margin-bottom: 2.2em;
+        }
+    }
+}
+
+#pages {
+    padding: .5em;
+    margin: 1em 0;
+    box-shadow: 0 1px 0 0 darken(@white, 4%), 0 -1px 1px 0 lighten(@darkGrey, 60%);
+    a {
+        text-shadow: 0px 1px 1px white;
+        font-weight: bold;
+        color: @darkGrey;
+        &:hover {
+            color: lighten(@darkGrey, 35%);
+        }
+    }
+}
+
+blockquote {
+    border-color: darken(@lightGrey, 40%);
+    color: darken(@green, 10%);
+    font-weight: 100;
+}
+
+
+#download {
+    @bgColor: @lightGrey;
+    @borderColor: lighten(@darkGrey, 55%);
+    .button-variant(@darkGrey, @bgColor, @borderColor);
+    font-size: smaller;
+    font-weight: bold;
+    line-height: 1.25em;
+    padding: .9em 2.5em;
+    box-shadow: 0 1px 0 0 @borderColor, 0 0 0 3px lighten(desaturate(@borderColor, 5%), 10%), 0 1px 0 0 lighten(@bgColor, 10%) inset;
+    margin-top: 1em;
+}
+
+@import "footer";

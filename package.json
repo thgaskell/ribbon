@@ -1,0 +1,36 @@
+{
+  "name": "ribbon",
+  "version": "0.0.0",
+  "description": "Practice website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thgaskell/ribbon.git"
+  },
+  "keywords": [
+    "two-column",
+    "dark-on-light",
+    "dark-grey",
+    "green",
+    "light-grey"
+  ],
+  "author": "Tony Gaskell",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/thgaskell/ribbon/issues"
+  },
+  "homepage": "https://github.com/thgaskell/ribbon",
+  "devDependencies": {
+    "gulp": "~3.5.6",
+    "gulp-util": "~2.2.14",
+    "gulp-less": "~1.2.3",
+    "gulp-jade": "~0.4.2",
+    "gulp-livereload": "~1.2.0",
+    "gulp-image": "~0.2.1",
+    "gulp-uglify": "~0.2.1",
+    "express": "~3.5.0"
+  }
+}

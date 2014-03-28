@@ -1,0 +1,90 @@
+@import "../../../lib/bootstrap/less/mixins";
+@import "elements";
+
+#header {
+    background-color: @darkGrey;
+    nav {
+        border-bottom: 1px solid white;
+    }
+    a {
+        color: white;
+    }
+}
+
+.navbar {
+    border: none;
+    border-radius: 0;
+}
+
+nav.main {
+    background: url('../images/bg_h.png');
+    height: 50px;
+}
+
+nav.navbar-default {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+form.search {
+    width: 230px;
+    position: relative;
+    label {
+        position: absolute;
+        z-index: 10;
+        left: .75em;
+        top: .5em;
+    }
+    i {
+        color: @darkGrey;
+        border-radius: 50% 0 0 50%;
+    }
+    input {
+    	border-radius: 2em !important;
+        padding-left: 2.5em;
+    }
+}
+
+nav.social {
+    background: url('../images/bg_1.png');
+    height: 142px;
+    padding-top: 35px;
+    li {
+        .square(60px);
+        .rounded(50%);
+        box-shadow: 0px 0px 0px 5px rgba(red(@darkGrey), green(@darkGrey), blue(@darkGrey), 10%), 0px 2px lighten(@darkGrey, 50%);
+        .gradient(lighten(@lightGrey, 10%), darken(@lightGrey, 5%), lighten(@lightGrey, 5%));
+        margin-right: 15px;
+        text-align: center;
+        i {
+            -webkit-animation: cool .5s;
+            color: @darkGrey;
+        }
+        &:hover i{
+            -webkit-animation: glow .5s;
+            color: @green;
+        }
+    }
+    margin-bottom: -3em;
+    z-index: 2;
+}
+
+@-webkit-keyframes glow
+{
+    from {
+        color: @darkGrey;
+    }
+    to {
+        color: @green;
+    }
+}
+
+@-webkit-keyframes cool
+{
+    from {
+        color: @green;
+    }
+    to {
+        color: @darkGrey;
+    }
+}
